@@ -1,0 +1,209 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body   {
+  
+    font-family: Arial, sans-serif;
+    background-color:   #f0f0f0;
+    color: #333333;
+}
+
+header
+ {
+    background-color: #1a3c6e;
+    padding: 15px 30px;
+   
+    display: flex;
+  
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header h1 {
+  
+      color: #f4a624;
+    
+    
+      font-size: 28px;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    
+    display: flex;
+    list-style: none;
+   
+    gap: 10px;
+}
+
+
+nav ul li a {
+   
+     color: white;
+    
+    text-decoration: none;
+ padding: 8px 16px;
+   
+     font-size: 15px;
+}
+
+nav ul li a:hover {
+    background-color: #f4a624;
+    color: #1a3c6e;
+    border-radius: 4px;
+}
+
+.hero {
+    background-color: #1a3c6e;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #cccccc;
+}
+
+#clubs {
+    padding: 50px 30px;
+    background-color: #f0f0f0;
+}
+
+.section-title {
+        
+    text-align: center;
+        font-size: 26px;
+       color: #1a3c6e;
+        margin-bottom: 30px;
+        text-decoration: underline;
+}
+
+.cards {
+    display: flex;
+        justify-content: center;
+      gap: 25px;
+     flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+ 
+       width: 280px;
+    
+        border: 1px solid #cccccc;
+    
+        border-radius: 8px;
+    
+        padding: 15px;
+    margin: 5px;
+    }
+
+.card:hover {
+    border-color: #1a3c6e;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.card h3 {
+    
+    font-size: 18px;
+    color: #1a3c6e;
+    margin-bottom: 8px;
+}
+
+.card p {
+  
+    font-size: 14px;
+      color: #555555;
+    line-height: 1.6;
+    
+    margin-bottom: 12px;
+}
+
+.card button {
+    background-color: #1a3c6e;
+ 
+       color: white;
+    border: none;
+       padding: 9px 20px;
+    border-radius: 4px;
+    
+    font-size: 14px;
+     cursor: pointer;
+    width: 100%;
+}
+
+.card button:hover {
+      background-color: #f4a624;
+      color: #1a3c6e;
+}
+
+#gallery {
+    padding: 50px 30px;
+    background-color: #e8e8e8;
+}
+
+.gallery {
+    display: flex;
+    
+    flex-wrap: wrap;
+        gap: 15px;
+    
+        justify-content: center;
+}
+
+.gallery-img {
+        width: 280px;
+        
+    height: 180px;
+
+     background-color: #d0d0d0;
+   
+    border: 1px solid #bbbbbb;
+    
+    border-radius: 5px;
+}
+
+
+#contact {
+   
+      padding: 50px 30px;
+    background-color:   #f0f0f0;
+       text-align: 
+    center;
+}
+
+.contact-info
+ {
+    
+    margin-top: 15px;
+}
+
+.contact-info p {
+    font-size: 15px;
+    color: #444444;
+    margin-bottom: 8px;
+}
+
+footer {
+   
+    background-color: #1a3c6e;
+    color: #cccccc;
+  
+    text-align: center;
+    padding: 
+    15px;
+    font-size: 14px;
+}
