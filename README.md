@@ -96,13 +96,8 @@ StudentHub Portal/
 ├── database/
 │   └── studenthub.sql
 │
-├── Practical11/
-├── Practical12/
-├── Practical13/
-├── Practical14/
-├── PracticalFiles/
+├── PracticalFile
 │
-├── 25DCE108_WDF_poster.pdf
 ├── Requirement Analysis
 ├── Sitemapp.txt
 ├── Wireframes
@@ -227,7 +222,7 @@ Some service modules are currently static/demo pages and need further integratio
 
 ## Coursework Documents
 
-The project includes practical reports in `PracticalFiles/`, the poster `25DCE108_WDF_poster.pdf`, and supporting documentation such as requirements analysis, sitemap, wireframes, and challenges/learnings notes.
+The project includes practical reports in `PracticalFiles/` and supporting documentation such as requirements analysis, sitemap, wireframes, and challenges/learnings notes.
 
 ---
 
