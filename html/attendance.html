@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <script>
+    if (localStorage.getItem("studentHubSidebar") === "open") {
+        document.documentElement.classList.add("sidebar-should-open");
+    }
+</script> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Attendance</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <button class="menu-btn" id="menuButton" type="button">
+    ☰
+</button>
+
+<div id="sidebar-container"></div>
+        <div class="logo">StudentHub</div>
+    </div>
+    <div class="header-right">
+         <button id="themeToggle" class="theme-toggle">
+            🌙
+        </button>
+        <a href="../html/profile.html">Profile</a>
+        <a href="../html/login.html">Logout</a>
+    </div>
+
+</header>
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        StudentHub
+    </div>
+    <nav class="sidebar-links">
+        <ul>
+            <li>
+                <a href="dashboard.html">Dashboard</a>
+            </li>
+            <li>
+                <a href="Profile.html">Profile</a>
+            </li>
+            <li>
+                <a href="events.html">Events</a>
+            </li>
+            <li>
+                <a href="attendance.html">Attendance</a>
+            </li>
+            <li>
+                <a href="results.html">Results</a>
+            </li>
+            <li>
+                <a href="certificates.html">Certificates</a>
+            </li>
+            <li>
+                <a href="fees.html">Fees</a>
+            </li>
+            <li>
+                <a href="feedback.html">Feedback</a>
+            </li>
+            <li>
+                <a href="login.html"> Logout </a>
+            </li>
+        </ul>
+    </nav>
+</aside> 
+<div id="overlay" class="overlay"></div>
+<div class="container">
+
+    <!-- Page Heading -->
+    <section class="hero attendance-hero">
+
+        <h1>Attendance Dashboard</h1>
+        <p>
+            Monitor your attendance across all subjects and stay above the
+            required attendance percentage.
+        </p>
+    </section>
+
+    <!-- Statistics -->
+    <div class="grid attendance-grid">
+
+        <div class="card stats-card">
+            <h3>Overall Attendance</h3>
+            <h1>82%</h1>
+            <span class="badge badge-green">Good Standing</span>
+        </div>
+
+        <div class="card stats-card">
+            <h3>Present</h3>
+            <h1>116</h1>
+            <p>Classes Attended</p>
+        </div>
+
+        <div class="card stats-card">
+            <h3>Absent</h3>
+            <h1>26</h1>
+            <p>Classes Missed</p>
+        </div>
+
+        <div class="card stats-card">
+            <h3>Required</h3>
+            <h1>75%</h1>
+            <p>Minimum Attendance</p>
+        </div>
+
+    </div>
+    <!-- Subject Attendance -->
+    <div class="card">
+
+        <h2>Subject-wise Attendance</h2>
+
+        <div class="subjects">
+
+            <div class="subject-card">
+                <h3>Data Structures</h3>
+                <progress value="87" max="100"></progress>
+                <p><strong>87%</strong></p>
+                <span class="badge badge-green">Safe</span>
+            </div>
+
+            <div class="subject-card">
+                <h3>Computer Networks</h3>
+                <progress value="80" max="100"></progress>
+                <p><strong>80%</strong></p>
+                <span class="badge badge-green">Safe</span>
+            </div>
+
+            <div class="subject-card">
+                <h3>Web Development</h3>
+                <progress value="72" max="100"></progress>
+                <p><strong>72%</strong></p>
+                <span class="badge badge-pink">Warning</span>
+            </div>
+
+            <div class="subject-card">
+                <h3>Discrete Mathematics</h3>
+                <progress value="64" max="100"></progress>
+                <p><strong>64%</strong></p>
+                <span class="badge badge-blue">Critical</span>
+            </div>
+
+            <div class="subject-card">
+                <h3>OOP</h3>
+                <progress value="86" max="100"></progress>
+                <p><strong>86%</strong></p>
+                <span class="badge badge-green">Safe</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Table -->
+
+    <div class="card">
+
+        <h2>Recent Attendance</h2>
+
+        <table>
+
+            <tr>
+                <th>Date</th>
+                <th>Subject</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>15 July</td>
+                <td>Data Structures</td>
+                <td><span class="badge badge-green">Present</span></td>
+            </tr>
+
+            <tr>
+                <td>15 July</td>
+                <td>Computer Networks</td>
+                <td><span class="badge badge-pink">Absent</span></td>
+            </tr>
+
+            <tr>
+                <td>14 July</td>
+                <td>Web Development</td>
+                <td><span class="badge badge-green">Present</span></td>
+            </tr>
+
+            <tr>
+                <td>14 July</td>
+                <td>OOP</td>
+                <td><span class="badge badge-green">Present</span></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- Bottom Cards -->
+
+    <div class="grid attendance-grid">
+
+        <div class="card">
+
+            <h3>Notifications</h3>
+            <br>
+            <p>Web Development attendance is below 75%.</p>
+            <br>
+            <p>Attend the next 3 classes to stay eligible.</p>
+
+        </div>
+
+        <div class="card">
+            <h3>Attendance Rules</h3>
+            <br>
+            <p><strong>Minimum Attendance:</strong> 75%</p>
+            <br>
+            <p>Medical leave requires valid proof.</p>
+            <br>
+            <p>Students below 75% may not be eligible for exams.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2026 StudentHub | Attendance Portal
+</footer>
+<script src="../js/script.js"></script> 
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+    if (localStorage.getItem("studentHubSidebar") === "open") {
+        document.documentElement.classList.add("sidebar-should-open");
+    }
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Events</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-left">
+        <button class="menu-btn" id="menuButton" type="button">
+    ☰
+</button>
+
+<div id="sidebar-container"></div>
+        <div class="logo">StudentHub</div>
+    </div>
+    <div class="header-right">
+         <button id="themeToggle" class="theme-toggle">
+            🌙
+        </button>
+        <a href="../html/profile.html">Profile</a>
+        <a href="../html/login.html">Logout</a>
+    </div>
+
+</header>
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+        StudentHub
+    </div>
+
+    <nav class="sidebar-links">
+        <ul>
+            <li>
+                <a href="dashboard.html">Dashboard</a>
+            </li>
+            <li>
+                <a href="Profile.html">Profile</a>
+            </li>
+            <li>
+                <a href="events.html">Events</a>
+            </li>
+
+            <li>
+                <a href="attendance.html">Attendance</a>
+            </li>
+
+            <li>
+                <a href="results.html">Results</a>
+            </li>
+
+            <li>
+                <a href="certificates.html">Certificates</a>
+            </li>
+
+            <li>
+                <a href="fees.html">Fees</a>
+            </li>
+
+            <li>
+                <a href="feedback.html">Feedback</a>
+            </li>
+            <li>
+                <a href="login.html"> Logout </a>
+            </li>
+        </ul>
+    </nav>
+
+</aside> 
+<div id="overlay" class="overlay"></div>
+
+<div class="container">
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <h1>College Events</h1>
+
+        <p>Stay updated with workshops, competitions, festivals, and campus activities.</p>
+
+    </section>
+    <br>
+    <!-- Upcoming Deadline -->
+
+    <div class="card">
+
+        <h2> Upcoming Deadline</h2>
+
+        <br>
+
+        <p><strong>Hackathon Registration</strong> closes on <strong>20 July 2026</strong>.</p>
+
+        <span class="badge badge-pink">Register Soon</span>
+
+    </div>
+
+    <br>
+
+    <!-- Event Cards -->
+
+    <!-- ================= PRACTICAL 6 EVENTS ================= -->
+
+<div class="card">
+
+    <h2>Upcoming Events</h2>
+
+    <p id="eventLoading">
+        Loading events...
+    </p>
+
+    <p id="eventError" class="error-message"></p>
+
+    <!-- Search and Filter -->
+
+    <div class="event-controls">
+
+        <input
+            type="text"
+            id="eventSearch"
+            placeholder="Search events..."
+        >
+
+        <select id="eventCategory">
+            <option value="all">All Categories</option>
+        </select>
+
+        <select id="eventSort">
+            <option value="default">Sort By</option>
+            <option value="title-asc">Title A-Z</option>
+            <option value="title-desc">Title Z-A</option>
+            <option value="date-asc">Date: Earliest</option>
+            <option value="date-desc">Date: Latest</option>
+        </select>
+
+    </div>
+
+    <!-- Dynamic Events -->
+
+    <div
+        id="eventsContainer"
+        class="grid attendance-grid"
+    ></div>
+
+    <!-- Pagination -->
+
+    <div class="pagination">
+
+        <button
+            id="prevPage"
+            class="btn"
+            type="button"
+        >
+            Previous
+        </button>
+
+        <span id="pageInfo">
+            Page 1
+        </span>
+
+        <button
+            id="nextPage"
+            class="btn"
+            type="button"
+        >
+            Next
+        </button>
+
+    </div>
+
+</div>
+
+    <br>
+
+    <!-- Latest News -->
+
+    <div class="card">
+
+        <h2>Latest News</h2>
+
+        <ul>
+            <li>Robotics Competition registrations are now open.</li>
+            <li>Independence Day celebrations begin next week.</li>
+            <li>Photography Club welcomes new members.</li>
+            <li>Hackathon prize pool has been increased.</li>
+        </ul>
+
+    </div>
+
+    <br>
+
+    <!-- Calendar -->
+
+    <div class="card">
+
+        <h2>Event Calendar - July 2026</h2>
+
+        <table>
+
+            <tr>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td><strong>10</strong><br>Cultural Fest</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+
+            <tr>
+                <td>14</td>
+                <td><strong>15</strong><br>Sports Fest</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td><strong>20</strong><br>Deadline</td>
+            </tr>
+
+            <tr>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td><strong>25</strong><br>AI Workshop</td>
+                <td>26</td>
+                <td>27</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <br>
+
+    <!-- Bottom Cards -->
+
+    <div class="grid attendance-grid">
+
+        <div class="card">
+
+            <h3>📞 Event Coordinators</h3>
+
+            <br>
+
+            <p>Student Activity Cell</p>
+
+            <p>Email: events@studenthub.edu</p>
+
+            <p>Phone: +91 98765 43210</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Quick Tips</h3>
+
+            <br>
+
+            <p>✔ Register before deadlines.</p>
+
+            <p>✔ Carry your Student ID.</p>
+
+            <p>✔ Reach the venue 15 minutes early.</p>
+
+            <br>
+
+            <button class="btn">Register Now</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+
+    © 2026 StudentHub | Events Portal
+
+</footer>
+<script src="../js/script.js"></script>
+</body>
+</html>

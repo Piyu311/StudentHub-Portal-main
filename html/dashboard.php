@@ -1,0 +1,200 @@
+<?php
+require_once '../php/session.php';
+
+if (
+    !isset($_SESSION['logged_in']) ||
+    $_SESSION['logged_in'] !== true
+) {
+    header('Location: login.html');
+    exit;
+}
+
+if (($_SESSION['role'] ?? '') !== 'student') {
+    http_response_code(403);
+    exit('Access denied. Student accounts only.');
+}
+
+$fullname = $_SESSION['fullname'] ?? 'Student';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <script>
+    if (localStorage.getItem("studentHubSidebar") === "open") {
+        document.documentElement.classList.add("sidebar-should-open");
+    }
+</script> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-left">
+        <button class="menu-btn" id="menuButton" type="button">
+    ☰
+</button>
+
+<div id="sidebar-container"></div>
+        <div class="logo">StudentHub</div>
+    </div>
+    <div class="header-right">
+         <button id="themeToggle" class="theme-toggle">
+            🌙
+        </button>
+        <a href="../html/profile.html">Profile</a>
+        <a href="../php/logout.php">Logout</a>
+    </div>
+
+</header>
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+        StudentHub
+    </div>
+
+    <nav class="sidebar-links">
+        <ul>
+            <li>
+                <a href="dashboard.html">Dashboard</a>
+            </li>
+            <li>
+                <a href="Profile.html">Profile</a>
+            </li>
+            <li>
+                <a href="events.html">Events</a>
+            </li>
+
+            <li>
+                <a href="attendance.html">Attendance</a>
+            </li>
+
+            <li>
+                <a href="results.html">Results</a>
+            </li>
+
+            <li>
+                <a href="certificates.html">Certificates</a>
+            </li>
+
+            <li>
+                <a href="fees.html">Fees</a>
+            </li>
+
+            <li>
+                <a href="feedback.html">Feedback</a>
+            </li>
+            <li>
+                <a href="../php/logout.php">Logout</a>
+            </li>
+        </ul>
+    </nav>
+
+</aside> 
+<div id="overlay" class="overlay"></div>
+<main class="main-content">
+    <div class="container">
+        <h1>Hi <?php echo htmlspecialchars($fullname); ?>!</h1>
+        <p>Your one-stop portal to manage academics, events, attendance, results, certificates, fees, and much more.</p>
+    </div>
+    
+    </section>
+    <div class="grid attendance-grid">
+
+        <div class="card">
+            <h2>Events</h2>
+            <p>Know about upcoming college events and workshops.</p>
+            <br>
+            <a href="../html/events.html">
+                <button class="btn">Open</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <h2>Attendance</h2>
+            <p>View your attendance percentage and subject-wise records.</p>
+            <br>
+            <a href="../html/attendance.html">
+                <button class="btn">Open</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <h2>Results</h2>
+            <p>Check semester results, grades, and academic performance.</p>
+            <br>
+            <a href="../html/results.html">
+                <button class="btn">Open</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <h2>Certificates</h2>
+            <p>Download academic certificates and official documents.</p>
+            <br>
+            <a href="../html/certificates.html">
+                <button class="btn">Open</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <h2>Fees</h2>
+            <p>View fee details, pending payments, and payment history.</p>
+            <br>
+            <a href="../html/fees.html">
+                <button class="btn">Open</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <h2>Feedback</h2>
+            <p>Submit suggestions and feedback to improve campus services.</p>
+            <br>
+            <a href="../html/feedback.html">
+                <button class="btn">Open</button>
+            </a>
+        </div>
+
+    </div>
+    </main> 
+    <br>
+    <!-- Latest Updates -->
+    <div class="grid attendance-grid">
+
+        <div class="card">
+
+            <h3> Latest Announcements</h3>
+
+            <br>
+            <ul>
+                <li>Hackathon registrations close on <strong>20 July 2026</strong>.</li>
+                <li>Semester Examination timetable released.</li>
+                <li>AI Workshop scheduled for <strong>25 July 2026</strong>.</li>
+                <li>Library remains open until 9 PM during exams.</li>
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h3> Upcoming Tasks</h3>
+
+            <br>
+            <p>✔ Pay examination fees.</p>
+            <p>✔ Register for Hackathon.</p>
+            <p>✔ Maintain attendance above 75%.</p>
+            <p>✔ Check internal assessment marks.</p>
+        </div>
+
+    </div>
+<footer>
+    © 2026 StudentHub | Student Dashboard
+</footer>
+<script src="../js/script.js"></script> 
+</body>
+</html>

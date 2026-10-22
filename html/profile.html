@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Profile | StudentHub</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+    <div class="header-left">
+        <button class="menu-btn" id="menuButton" type="button">
+    ☰
+</button>
+
+<div id="sidebar-container"></div>
+        <div class="logo">StudentHub</div>
+    </div>
+    <div class="header-right">
+         <button id="themeToggle" class="theme-toggle">
+            🌙
+        </button>
+        <a href="../html/profile.html">Profile</a>
+        <a href="../html/login.html">Logout</a>
+    </div>
+
+</header>
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+        StudentHub
+    </div>
+
+    <nav class="sidebar-links">
+        <ul>
+            <li>
+                <a href="dashboard.html">Dashboard</a>
+            </li>
+            <li>
+                <a href="Profile.html">Profile</a>
+            </li>
+            <li>
+                <a href="events.html">Events</a>
+            </li>
+
+            <li>
+                <a href="attendance.html">Attendance</a>
+            </li>
+
+            <li>
+                <a href="results.html">Results</a>
+            </li>
+
+            <li>
+                <a href="certificates.html">Certificates</a>
+            </li>
+
+            <li>
+                <a href="fees.html">Fees</a>
+            </li>
+
+            <li>
+                <a href="feedback.html">Feedback</a>
+            </li>
+            <li>
+                <a href="login.html"> Logout </a>
+            </li>
+        </ul>
+    </nav>
+
+</aside> 
+<div id="overlay" class="overlay"></div>
+    <!-- Page Header -->
+    <main>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header profile-page-header">
+        <h1>Student Profile</h1>
+        <p>View and manage your personal and admission information.</p>
+    </section>
+
+    <div class="profile-page">
+
+        <!-- ==============================
+             PROFILE OVERVIEW
+        =============================== -->
+        <section class="profile-overview">
+
+            <div class="profile-placeholder">
+                 <img src="../images/profilepic.png" alt="Student profile">
+            </div>
+
+            <div class="profile-intro">
+                <span class="profile-badge">● Active Student</span>
+                <h2>Heer Shah</h2>
+
+                <p>
+                    Computer Engineering • Semester 3
+                </p>
+
+                <div class="student-meta">
+                    <span>
+                        Student ID:
+                        <strong>CE2025XXX</strong>
+                    </span>
+
+                    <span>
+                        Academic Year:
+                        <strong>2026–27</strong>
+                    </span>
+                </div>
+            </div>
+
+            <button class="btn btn-primary edit-profile-btn">
+                Edit Profile
+            </button>
+
+        </section>
+        <!-- ==============================
+             PERSONAL INFORMATION
+        =============================== -->
+        <section class="profile-section">
+
+            <div class="section-heading">
+                <h2>Personal Information</h2>
+                <p>Basic personal details of the student.</p>
+            </div>
+
+            <div class="information-grid">
+
+                <div class="information-item">
+                    <span>Student Name</span>
+                    <strong>Heer Shah</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Student Name as per Aadhaar</span>
+                    <strong>Heer Shah</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Date of Birth</span>
+                    <strong>DD/MM/YYYY</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Gender</span>
+                    <strong>Female</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Blood Group</span>
+                    <strong>B+</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Mother Tongue</span>
+                    <strong>Gujarati</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Marital Status</span>
+                    <strong>Unmarried</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Nationality</span>
+                    <strong>Indian</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             CONTACT + ADDRESS
+        =============================== -->
+        <div class="profile-two-column">
+
+            <!-- CONTACT -->
+            <section class="profile-section">
+
+                <div class="section-heading">
+                    <h2>Contact Information</h2>
+                    <p>Student communication details.</p>
+                </div>
+
+                <div class="information-grid single-column">
+
+                    <div class="information-item">
+                        <span>Mobile Number</span>
+                        <strong>+91 XXXXX XXXXX</strong>
+                    </div>
+
+                    <div class="information-item">
+                        <span>College Email</span>
+                        <strong>student@college.edu</strong>
+                    </div>
+
+                    <div class="information-item">
+                        <span>Personal Email</span>
+                        <strong>student@email.com</strong>
+                    </div>
+
+                    <div class="information-item">
+                        <span>Emergency Contact</span>
+                        <strong>+91 XXXXX XXXXX</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ADDRESS -->
+            <section class="profile-section">
+
+                <div class="section-heading">
+                    <h2>Address</h2>
+                    <p>Current residential information.</p>
+                </div>
+
+                <div class="information-grid single-column">
+
+                    <div class="information-item">
+                        <span>Address</span>
+                        <strong>
+                            Student Residential Address
+                        </strong>
+                    </div>
+
+                    <div class="information-item">
+                        <span>City</span>
+                        <strong>Vadodara</strong>
+                    </div>
+
+                    <div class="information-item">
+                        <span>State</span>
+                        <strong>Gujarat</strong>
+                    </div>
+
+                    <div class="information-item">
+                        <span>PIN Code</span>
+                        <strong>390001</strong>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==============================
+             ADMISSION DETAILS
+        =============================== -->
+        <section class="profile-section">
+
+            <div class="section-heading">
+                <h2>Admission Details</h2>
+                <p>Information related to the student's admission.</p>
+            </div>
+
+            <div class="information-grid">
+
+                <div class="information-item">
+                    <span>Academic Year</span>
+                    <strong>2026–27</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Admission Year (University)</span>
+                    <strong>2024–25</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Admission Term</span>
+                    <strong>First</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Date of Admission</span>
+                    <strong>DD/MM/YYYY</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Admission Type</span>
+                    <strong>Regular</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Current Semester</span>
+                    <strong>3</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Program</span>
+                    <strong>B.Tech</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Branch</span>
+                    <strong>Computer Engineering</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Division</span>
+                    <strong>A</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Roll Number</span>
+                    <strong>27</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             LAST SCHOOL / COLLEGE
+        =============================== -->
+        <section class="profile-section">
+
+            <div class="section-heading">
+                <h2>Last School / College Details</h2>
+                <p>Details of the student's previous institution.</p>
+            </div>
+
+            <div class="information-grid">
+
+                <div class="information-item">
+                    <span>Institution Name</span>
+                    <strong>ABC Higher Secondary School</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Institution Type</span>
+                    <strong>School</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Board / University</span>
+                    <strong>GSEB</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Stream / Course</span>
+                    <strong>Science</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Passing Year</span>
+                    <strong>2024</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Percentage / CGPA</span>
+                    <strong>84.20%</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>City</span>
+                    <strong>Vadodara</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>State</span>
+                    <strong>Gujarat</strong>
+                </div>
+            </div>
+    </section>
+
+        <!-- ==============================
+             PREVIOUS QUALIFICATION
+        =============================== -->
+        <section class="profile-section">
+
+            <div class="section-heading">
+                <h2>Previous Qualification</h2>
+                <p>Academic qualifications completed before admission.</p>
+            </div>
+
+            <div class="table-wrapper profile-table-wrapper">
+                <table class="profile-table">
+                    <thead>
+                        <tr>
+                            <th>Qualification</th>
+                            <th>Board / University</th>
+                            <th>Year</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>SSC</td>
+                            <td>GSEB</td>
+                            <td>2022</td>
+                            <td>88.00%</td>
+                        </tr>
+
+                        <tr>
+                            <td>HSC</td>
+                            <td>GSEB</td>
+                            <td>2024</td>
+                            <td>84.20%</td>
+                        </tr>
+
+                        <tr>
+                            <td>GUJCET</td>
+                            <td>ACPC</td>
+                            <td>2024</td>
+                            <td>81.25 Percentile</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ==============================
+             SCHOLARSHIP
+        =============================== -->
+        <section class="profile-section">
+
+            <div class="section-heading">
+                <h2>Scholarship Details</h2>
+                <p>Information regarding scholarships and financial assistance.</p>
+            </div>
+
+            <div class="information-grid">
+
+                <div class="information-item">
+                    <span>Scholarship Status</span>
+                    <strong>
+                        <span class="status-badge approved">
+                            Approved
+                        </span>
+                    </strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Scholarship Name</span>
+                    <strong>Merit Scholarship</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Scholarship Type</span>
+                    <strong>Government</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Academic Year</span>
+                    <strong>2026–27</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Application Number</span>
+                    <strong>SCH2026XXXX</strong>
+                </div>
+
+                <div class="information-item">
+                    <span>Scholarship Amount</span>
+                    <strong>₹25,000</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             FAMILY + IDENTIFICATION
+        =============================== -->
+        <div class="profile-two-column">
+
+            <!-- FAMILY -->
+            <section class="profile-section">
+
+                <div class="section-heading">
+                    <h2>Family Details</h2>
+                    <p>Basic parent or guardian information.</p>
+                </div>
+
+                <div class="information-grid single-column">
+
+                    <div class="information-item">
+                        <span>Father / Guardian Name</span>
+                        <strong>Parent Name</strong>
+                    </div>
+
+                    <div class="information-item">
+                        <span>Mother Name</span>
+                        <strong>Mother Name</strong>
+                    </div>
+
+                    <div class="information-item">
+                        <span>Parent / Guardian Contact</span>
+                        <strong>+91 XXXXX XXXXX</strong>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- IDENTIFICATION -->
+            <section class="profile-section">
+
+                <div class="section-heading">
+                    <h2>🪪 Identification</h2>
+                    <p>Basic student identification information.</p>
+                </div>
+
+                <div class="information-grid single-column">
+
+                    <div class="information-item">
+                        <span>Student ID</span>
+                        <strong>CE2025XXX</strong>
+                    </div>
+
+                    <div class="information-item">
+                        <span>University Enrollment No.</span>
+                        <strong>UNI2024XXXX</strong>
+                    </div>
+
+                    <div class="information-item">
+                        <span>Aadhaar</span>
+                        <strong>XXXX XXXX 4521</strong>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==============================
+             DOCUMENT STATUS
+        =============================== -->
+        <section class="profile-section">
+
+            <div class="section-heading">
+                <h2>Document Status</h2>
+                <p>Verification status of submitted documents.</p>
+            </div>
+
+            <div class="document-list">
+
+                <div class="document-item">
+                    <div>
+                        <strong>Aadhaar Card</strong>
+                        <small>Identity document</small>
+                    </div>
+                    <span class="status-badge approved">Verified</span>
+                </div>
+
+                <div class="document-item">
+                    <div>
+                        <strong>SSC Marksheet</strong>
+                        <small>Previous qualification</small>
+                    </div>
+                    <span class="status-badge approved">Verified</span>
+                </div>
+
+                <div class="document-item">
+                    <div>
+                        <strong>HSC Marksheet</strong>
+                        <small>Previous qualification</small>
+                    </div>
+                    <span class="status-badge approved">Verified</span>
+                </div>
+
+                <div class="document-item">
+                    <div>
+                        <strong>Income Certificate</strong>
+                        <small>Scholarship document</small>
+                    </div>
+                    <span class="status-badge pending">Pending</span>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+    <footer>
+        <p>© 2026 StudentHub. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

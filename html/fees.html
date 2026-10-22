@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <script>
+    if (localStorage.getItem("studentHubSidebar") === "open") {
+        document.documentElement.classList.add("sidebar-should-open");
+    }
+</script> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Fees</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-left">
+        <button class="menu-btn" id="menuButton" type="button">
+    ☰
+</button>
+
+<div id="sidebar-container"></div>
+        <div class="logo">StudentHub</div>
+    </div>
+    <div class="header-right">
+         <button id="themeToggle" class="theme-toggle">
+            🌙
+        </button>
+        <a href="../html/profile.html">Profile</a>
+        <a href="../html/login.html">Logout</a>
+    </div>
+
+</header>
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+        StudentHub
+    </div>
+
+    <nav class="sidebar-links">
+        <ul>
+            <li>
+                <a href="dashboard.html">Dashboard</a>
+            </li>
+            <li>
+                <a href="Profile.html">Profile</a>
+            </li>
+            <li>
+                <a href="events.html">Events</a>
+            </li>
+
+            <li>
+                <a href="attendance.html">Attendance</a>
+            </li>
+
+            <li>
+                <a href="results.html">Results</a>
+            </li>
+
+            <li>
+                <a href="certificates.html">Certificates</a>
+            </li>
+
+            <li>
+                <a href="fees.html">Fees</a>
+            </li>
+
+            <li>
+                <a href="feedback.html">Feedback</a>
+            </li>
+            <li>
+                <a href="login.html"> Logout </a>
+            </li>
+        </ul>
+    </nav>
+
+</aside> 
+<div id="overlay" class="overlay"></div>
+
+<div class="container">
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Fee Management</h1>
+        <p>
+            View your fee status, upcoming payments, and payment history.
+        </p>
+
+    </section>
+
+    <!-- Statistics -->
+    <div class="grid attendance-grid">
+
+        <div class="card stats-card">
+            <h3>Total Fees</h3>
+            <h1>₹95,000</h1>
+        </div>
+
+        <div class="card stats-card">
+            <h3>Paid</h3>
+            <h1>₹75,000</h1>
+            <span class="badge badge-green">Completed</span>
+        </div>
+
+        <div class="card stats-card">
+            <h3>Pending</h3>
+            <h1>₹20,000</h1>
+            <span class="badge badge-pink">Due</span>
+        </div>
+
+        <div class="card stats-card">
+            <h3>Due Date</h3>
+            <h1>30 Aug</h1>
+            <p>Semester Payment</p>
+        </div>
+
+    </div>
+
+    <!-- Fee Breakdown -->
+
+    <div class="card">
+
+        <h2>Semester Fee Details</h2>
+
+        <table>
+
+            <tr>
+                <th>Fee Type</th>
+                <th>Amount</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>Tuition Fee</td>
+                <td>₹60,000</td>
+                <td><span class="badge badge-green">Paid</span></td>
+            </tr>
+
+            <tr>
+                <td>Library Fee</td>
+                <td>₹5,000</td>
+                <td><span class="badge badge-green">Paid</span></td>
+            </tr>
+
+            <tr>
+                <td>Laboratory Fee</td>
+                <td>₹10,000</td>
+                <td><span class="badge badge-green">Paid</span></td>
+            </tr>
+
+            <tr>
+                <td>Examination Fee</td>
+                <td>₹20,000</td>
+                <td><span class="badge badge-pink">Pending</span></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- Payment History -->
+    <div class="card">
+        <h2>Recent Payments</h2>
+        <table>
+
+            <tr>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Mode</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>15 July 2026</td>
+                <td>₹30,000</td>
+                <td>UPI</td>
+                <td><span class="badge badge-green">Success</span></td>
+            </tr>
+
+            <tr>
+                <td>10 June 2026</td>
+                <td>₹20,000</td>
+                <td>Net Banking</td>
+                <td><span class="badge badge-green">Success</span></td>
+            </tr>
+
+            <tr>
+                <td>01 May 2026</td>
+                <td>₹25,000</td>
+                <td>Credit Card</td>
+                <td><span class="badge badge-green">Success</span></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- Bottom Cards -->
+    <div class="grid attendance-grid">
+
+        <div class="card">
+
+            <h3> Notice</h3>
+            <br>
+            <p>Your examination fee is pending.</p>
+            <br>
+            <p>Please complete the payment before <strong>30 August 2026</strong>.</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Payment Options</h3>
+            <br>
+            <p>✔ UPI</p>
+            <p>✔ Debit/Credit Card</p>
+            <p>✔ Net Banking</p>
+            <p>✔ Demand Draft</p>
+            <br>
+            <button class="btn">Pay Now</button>
+        </div>
+    </div>
+</div>
+<footer>
+    © 2026 StudentHub | Fee Management Portal
+</footer>
+<script src="../js/script.js"></script>
+</body>
+</html>
