@@ -233,7 +233,7 @@ The project includes practical reports in `PracticalFiles/`, the poster `25DCE10
 
 ## Developed By
 
-**Heer Shah**
+**Priyanshu Kacha**
 
 ---
 
